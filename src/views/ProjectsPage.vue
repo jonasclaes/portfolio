@@ -20,7 +20,7 @@ const projects: Ref<ProjectDocument[]> = ref([]);
 onMounted(async () => {
     const documents = await api.database.listDocuments(Server.projectsCollectionId);
     documents.documents.forEach((document) => {
-        projects.value.push(<any> document);
+        projects.value.push(<any>document);
     });
 });
 </script>
@@ -30,7 +30,12 @@ onMounted(async () => {
         <div class="bg-white shadow-md rounded-lg p-3 col-span-full">
             <h1 class="text-2xl">Projects</h1>
         </div>
-        <router-link :to="'/projects/' + project.slug" v-for="project in projects" :key="project.slug" class="bg-white shadow-md rounded-lg p-3 col-span-full">
+        <router-link
+            :to="'/projects/' + project.slug"
+            v-for="project in projects"
+            :key="project.slug"
+            class="bg-white shadow-md rounded-lg p-3 col-span-full"
+        >
             <h2 class="text-xl">{{ project.name }}</h2>
             <p class="text-gray-400">{{ project.short_description }}</p>
         </router-link>
