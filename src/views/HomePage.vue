@@ -7,7 +7,8 @@
 <template>
     <div class="grid grid-cols-6 gap-3">
         <div class="bg-white shadow-md rounded-lg p-3 col-span-full">
-            <h1 class="text-2xl">Welcome to my portfolio</h1>
+            <h1 class="text-4xl md:text-5xl">Welcome to my portfolio</h1>
+            <p class="text-xl text-gray-500">Learn more about me, my experience and my projects here.</p>
         </div>
         <div class="bg-white shadow-md rounded-lg p-3 col-span-full">
             <h1 class="text-xl">About me</h1>
