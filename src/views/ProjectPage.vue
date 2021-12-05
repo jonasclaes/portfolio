@@ -21,8 +21,7 @@ const project: Ref<ProjectDocument|null> = ref(null);
 
 onMounted(async () => {
     const dbDocuments = await api.database.listDocuments(Server.projectsCollectionId);
-    const documents = dbDocuments.documents;
-    // @ts-ignore
+    const documents: ProjectDocument[] = <any> dbDocuments.documents;
     project.value = documents.filter(document => document.slug === route.params.slug)[0];
 });
 </script>
