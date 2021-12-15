@@ -45,6 +45,10 @@ export default defineComponent({
         name: "About",
         location: "/about",
       },
+      {
+        name: "Projects",
+        location: "/projects",
+      },
     ];
 
     return {
